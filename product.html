@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ролетный шкаф — карточка товара — ПАРКШКАФ</title>
+  <meta name="description" content="Ролетный шкаф для машиноместа в паркинге: размеры, характеристики, выгоды и комплектация. Бесплатный замер и расчёт."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+</head>
+<body class="bg-white text-[#1a1f29]">
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5 text-[#1a1f29] font-bold text-xl tracking-tight">
+        <svg class="w-8 h-8 text-[#1B3A5B] flex-shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="4" width="26" height="25" rx="2"/><path d="M3 11h26" stroke-linecap="round"/><path d="M11 11v18" stroke-linecap="round"/><path d="M15 17h9M15 21h9M15 25h6" stroke-linecap="round"/><circle cx="7" cy="7.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="25" cy="7.5" r="1.3" fill="currentColor" stroke="none"/>
+        </svg>
+        ПАРКШКАФ
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html" data-nav="index.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">Главная</a>
+        <a href="catalog.html" data-nav="catalog.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">Каталог</a>
+        <a href="about.html" data-nav="about.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">О компании</a>
+        <a href="delivery.html" data-nav="delivery.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">Монтаж</a>
+        <a href="works.html" data-nav="works.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">Работы</a>
+        <a href="contacts.html" data-nav="contacts.html" class="text-gray-500 hover:text-[#1a1f29] text-sm font-medium transition-colors duration-200">Контакты</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#zayavka" class="btn-accent hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer">Бесплатный замер</a>
+        <button id="burger" class="md:hidden p-2 text-gray-500 hover:text-gray-900 cursor-pointer transition-colors" aria-label="Открыть меню" aria-expanded="false">
+          <svg class="icon-open w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="icon-close hidden w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <nav class="flex flex-col px-4 py-4 gap-1">
+      <a href="index.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">Главная</a>
+      <a href="catalog.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">Каталог</a>
+      <a href="about.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">О компании</a>
+      <a href="delivery.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">Монтаж и доставка</a>
+      <a href="works.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">Наши работы</a>
+      <a href="contacts.html" class="text-gray-700 hover:bg-gray-50 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors">Контакты</a>
+      <a href="#zayavka" class="btn-accent mt-3 flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-semibold cursor-pointer">Бесплатный замер</a>
+    </nav>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<section class="pt-24 pb-2 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="text-xs text-gray-400 flex items-center gap-2">
+      <a href="index.html" class="hover:text-[#1B3A5B]">Главная</a><span>/</span>
+      <a href="catalog.html" class="hover:text-[#1B3A5B]">Каталог</a><span>/</span>
+      <span class="text-[#1B3A5B] font-medium" data-bc>Ролетный шкаф</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ═══════════════ ТОВАР: ГАЛЕРЕЯ + ИНФО ═══════════════ -->
+<section class="py-8 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+
+      <!-- Галерея с анимацией ролеты -->
+      <div class="fade-up">
+        <div class="gallery-main roller-wrap shadow-lg mb-3" data-roller style="aspect-ratio:4/3;">
+          <img id="main-img" src="assets/shkaf-otkryt.jpg" alt="Ролетный шкаф"/>
+          <div class="roller-shutter"></div>
+          <div class="roller-handle"></div>
+        </div>
+        <div class="grid grid-cols-4 gap-3" id="thumbs">
+          <div class="thumb active h-20" data-src="assets/shkaf-otkryt.jpg"><img src="assets/shkaf-otkryt.jpg" alt="Открытый шкаф"/></div>
+          <div class="thumb h-20" data-src="assets/shkaf-zakryt.jpg"><img src="assets/shkaf-zakryt.jpg" alt="Закрытый шкаф"/></div>
+          <div class="thumb h-20" data-src="assets/shkaf-parking.jpg"><img src="assets/shkaf-parking.jpg" alt="Шкаф в паркинге"/></div>
+          <div class="thumb h-20" data-src="assets/stellazh.jpg"><img src="assets/stellazh.jpg" alt="Стеллаж внутри"/></div>
+        </div>
+        <p class="text-xs text-gray-400 mt-3 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-[#FF6A1A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Реальные фото с установленных объектов в паркинге
+        </p>
+      </div>
+
+      <!-- Инфо о товаре -->
+      <div class="fade-right">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="badge-steel badge" data-control>Ручное управление</span>
+          <span class="badge">Хит продаж</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-[#1a1f29] mb-2" data-title>Ролетный шкаф ПШ-2018А</h1>
+        <p class="text-[#5b6470] mb-6 leading-relaxed" data-lead>
+          Просторный шкаф под автоматической ролетой. Вмещает 4 колеса в сборе, велосипеды, коляску и сезонные вещи — всё под замком на вашем машиноместе.
+        </p>
+
+        <!-- Цена -->
+        <div class="flex items-end gap-3 mb-6">
+          <span class="text-4xl font-extrabold text-[#1B3A5B]" data-price>от 68 000 ₽</span>
+          <span class="text-sm text-gray-400 mb-1">под ключ, с монтажом</span>
+        </div>
+
+        <!-- Характеристики -->
+        <div class="bg-[#f4f6f8] rounded-xl p-5 mb-6">
+          <h3 class="text-sm font-bold text-[#1a1f29] mb-3 uppercase tracking-wide">Характеристики</h3>
+          <div class="text-sm divide-y divide-gray-200" data-specs>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Размер (Ш×В)</span><span class="font-semibold">2000 × 1800 мм</span></div>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Глубина</span><span class="font-semibold">600 мм</span></div>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Профиль</span><span class="font-semibold">Алюминий 77 мм</span></div>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Управление</span><span class="font-semibold">Автоматическое (Somfy)</span></div>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Полки</span><span class="font-semibold">4 шт., регулируемые</span></div>
+            <div class="flex justify-between py-2"><span class="text-[#5b6470]">Цвет</span><span class="font-semibold">Серый / белый (RAL по выбору)</span></div>
+          </div>
+        </div>
+
+        <!-- Что входит в комплект -->
+        <div class="mb-7">
+          <h3 class="text-sm font-bold text-[#1a1f29] mb-3 uppercase tracking-wide">В комплекте</h3>
+          <div class="grid grid-cols-2 gap-2 text-sm text-[#5b6470]">
+            <div class="flex items-center gap-2"><svg class="w-4 h-4 text-[#FF6A1A] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ролета и направляющие</div>
+            <div class="flex items-center gap-2"><svg class="w-4 h-4 text-[#FF6A1A] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Каркас и стеллаж</div>
+            <div class="flex items-center gap-2"><svg class="w-4 h-4 text-[#FF6A1A] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Замок в комплекте</div>
+            <div class="flex items-center gap-2"><svg class="w-4 h-4 text-[#FF6A1A] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Монтаж под ключ</div>
+          </div>
+        </div>
+
+        <!-- CTA: звонок + Telegram + форма -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-4">
+          <a href="tel:+70000000000" class="btn-steel inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg font-semibold text-sm cursor-pointer flex-1">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Позвонить
+          </a>
+          <a href="https://t.me/" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg font-semibold text-sm cursor-pointer flex-1 border-2 border-[#1B3A5B] text-[#1B3A5B] hover:bg-[#1B3A5B] hover:text-white transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="#zayavka" class="btn-accent inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg font-semibold text-sm cursor-pointer flex-1">
+            Рассчитать цену
+          </a>
+        </div>
+        <p class="text-xs text-gray-400 flex items-center gap-1.5">
+          <span class="pulse-dot inline-block w-2 h-2 rounded-full bg-[#FF6A1A]"></span>
+          Замер бесплатно · перезвоним в течение 30 минут
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ БОЛИ → РЕШЕНИЕ ═══════════════ -->
+<section class="py-16 bg-[#f4f6f8]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 fade-up">
+      <div class="badge mb-3">Зачем это вам</div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#1a1f29] mb-3">Знакомые проблемы — и как шкаф их закрывает</h2>
+      <p class="text-[#5b6470]">Балкон завален, в квартире нет места, а в машине вечно лежат шины. Ролетный шкаф решает это раз и навсегда.</p>
+    </div>
+
+    <div class="stagger-parent grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="stagger-child pain-card p-6">
+        <div class="pain-icon mb-4"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
+        <h3 class="font-bold text-[#1a1f29] mb-2">Квартира захламлена</h3>
+        <p class="text-sm text-[#5b6470] leading-relaxed">Коляска, лыжи, ёлка, инструмент — всё это занимает балкон и кладовку. Вынесите сезонные вещи в шкаф и верните пространство себе.</p>
+      </div>
+      <div class="stagger-child pain-card p-6">
+        <div class="pain-icon mb-4"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg></div>
+        <h3 class="font-bold text-[#1a1f29] mb-2">Шины негде хранить</h3>
+        <p class="text-sm text-[#5b6470] leading-relaxed">Сезонный комплект резины катается в багажнике или сдаётся на платное хранение. В шкафу 4 колеса стоят рядом с машиной — бесплатно и под рукой.</p>
+      </div>
+      <div class="stagger-child pain-card p-6">
+        <div class="pain-icon mb-4"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+        <h3 class="font-bold text-[#1a1f29] mb-2">Вещи в открытом доступе</h3>
+        <p class="text-sm text-[#5b6470] leading-relaxed">Велосипед у стены легко повредить или лишиться его. Стальная ролета с замком закрывает имущество от посторонних и от пыли.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ВЫГОДЫ + СЧЁТЧИКИ ═══════════════ -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-left">
+        <div class="badge-steel badge mb-3">Выгоды покупки</div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1a1f29] mb-6">Почему берут у нас</h2>
+        <div class="space-y-5">
+          <div class="flex gap-4">
+            <div class="icon-box"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+            <div><h4 class="font-semibold text-[#1a1f29] mb-1">Точно по размеру места</h4><p class="text-sm text-[#5b6470]">Замеряем ваше машиноместо и делаем шкаф впритык — ни сантиметра потерянного пространства.</p></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="icon-box"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+            <div><h4 class="font-semibold text-[#1a1f29] mb-1">Монтаж за 1 день</h4><p class="text-sm text-[#5b6470]">Своя бригада. Приезжаем, собираем, сдаём готовый шкаф — без грязи и долгого ожидания.</p></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="icon-box"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+            <div><h4 class="font-semibold text-[#1a1f29] mb-1">Гарантия 2 года</h4><p class="text-sm text-[#5b6470]">Алюминиевый профиль и фурнитура с гарантией. Ролета ходит мягко и тихо весь срок службы.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Счётчики -->
+      <div class="fade-right grid grid-cols-2 gap-5">
+        <div class="bg-[#f4f6f8] rounded-2xl p-6 text-center">
+          <div class="stat-num" data-count="1" data-suffix=" день">0</div>
+          <p class="text-sm text-[#5b6470] mt-2">на монтаж под ключ</p>
+        </div>
+        <div class="bg-[#f4f6f8] rounded-2xl p-6 text-center">
+          <div class="stat-num" data-count="2" data-suffix=" года">0</div>
+          <p class="text-sm text-[#5b6470] mt-2">гарантия на изделие</p>
+        </div>
+        <div class="bg-[#f4f6f8] rounded-2xl p-6 text-center">
+          <div class="stat-num" data-count="500" data-suffix="+">0</div>
+          <p class="text-sm text-[#5b6470] mt-2">установленных шкафов</p>
+        </div>
+        <div class="bg-[#f4f6f8] rounded-2xl p-6 text-center">
+          <div class="stat-num" data-count="30" data-suffix=" мин">0</div>
+          <p class="text-sm text-[#5b6470] mt-2">до ответа на заявку</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ЗАЯВКА ═══════════════ -->
+<section id="zayavka" class="cta-section py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="fade-up">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Рассчитать стоимость под ваше место</h2>
+      <p class="text-blue-100 mb-8">Оставьте телефон — приедем на бесплатный замер и пришлём точную цену с монтажом.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-7 shadow-xl fade-up text-left">
+      <form data-form class="grid sm:grid-cols-2 gap-4">
+        <input type="text" class="form-input" placeholder="Ваше имя" required/>
+        <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" required/>
+        <input type="text" class="form-input sm:col-span-2" placeholder="Модель или размеры (необязательно)" data-model-field/>
+        <button type="submit" class="btn-accent sm:col-span-2 py-3.5 rounded-lg font-semibold cursor-pointer">
+          Получить расчёт и бесплатный замер
+        </button>
+        <p class="text-gray-400 text-xs text-center sm:col-span-2">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+        <div data-success class="hidden sm:col-span-2 text-center py-3 text-green-600 font-semibold bg-green-50 rounded-lg border border-green-200">
+          Спасибо! Заявка принята, мы перезвоним в ближайшее время.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#102A42] border-t border-[#1B3A5B]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+          <svg class="w-6 h-6 text-[#FF6A1A]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="26" height="25" rx="2"/><path d="M3 11h26"/><path d="M11 11v18"/><path d="M14 17h9M14 21h9M14 25h6" stroke-linecap="round"/></svg>
+          ПАРКШКАФ
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">Ролетные шкафы и металлические стеллажи для машиномест в паркинге. Производство и монтаж под ключ.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-widest">Навигация</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Главная</a></li>
+          <li><a href="catalog.html" class="text-gray-400 hover:text-white text-sm transition-colors">Каталог</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">О компании</a></li>
+          <li><a href="delivery.html" class="text-gray-400 hover:text-white text-sm transition-colors">Монтаж и доставка</a></li>
+          <li><a href="works.html" class="text-gray-400 hover:text-white text-sm transition-colors">Наши работы</a></li>
+          <li><a href="contacts.html" class="text-gray-400 hover:text-white text-sm transition-colors">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-widest">Контакты</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2.5 text-gray-400 text-sm"><svg class="w-4 h-4 text-[#FF6A1A] mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+7 (000) 000-00-00</li>
+          <li class="flex items-start gap-2.5 text-gray-400 text-sm"><svg class="w-4 h-4 text-[#FF6A1A] mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>roman888gz@gmail.com</li>
+          <li class="flex items-start gap-2.5 text-gray-400 text-sm"><svg class="w-4 h-4 text-[#FF6A1A] mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg>Пн–Пт: 9:00–19:00<br>Сб: 10:00–16:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-widest">Мессенджеры</h4>
+        <div class="flex flex-col gap-2">
+          <a href="https://t.me/" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-3 py-2.5 bg-[#1B3A5B] border border-[#2d5277] rounded-lg text-sm text-gray-200 hover:border-[#FF6A1A] hover:text-white transition-colors cursor-pointer">
+            <svg class="w-5 h-5 text-[#FF6A1A]" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-3 py-2.5 bg-[#1B3A5B] border border-[#2d5277] rounded-lg text-sm text-gray-200 hover:border-[#FF6A1A] hover:text-white transition-colors cursor-pointer">
+            <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-[#1B3A5B] mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-gray-500 text-sm">© 2025 ПАРКШКАФ. Все права защищены.</p>
+      <a href="catalog.html" class="text-sm text-[#FF6A1A] hover:text-orange-300 transition-colors cursor-pointer">← Вернуться в каталог</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Данные моделей и наполнение карточки по ?m= ── -->
+<script>
+const MODELS = {
+  "ПШ-0812":{title:"Ролетный шкаф ПШ-0812",control:"Ручное управление",price:"от 27 000 ₽",
+    lead:"Компактный шкаф для узкого машиноместа. Поместятся комплект шин, инструмент и пара сезонных коробок.",
+    img:"assets/shkaf-zakryt.jpg",
+    specs:[["Размер (Ш×В)","800 × 1200 мм"],["Глубина","400 мм"],["Профиль","Алюминий 77 мм"],["Управление","Ручное"],["Полки","1 шт."],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-1015":{title:"Ролетный шкаф ПШ-1015",control:"Ручное управление",price:"от 34 500 ₽",
+    lead:"Универсальный средний размер. Шины, велосипед и сезонные вещи — всё под одной ролетой рядом с машиной.",
+    img:"assets/shkaf-zakryt.jpg",
+    specs:[["Размер (Ш×В)","1000 × 1500 мм"],["Глубина","450 мм"],["Профиль","Алюминий 77 мм"],["Управление","Ручное"],["Полки","2 шт."],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-1218":{title:"Ролетный шкаф ПШ-1218",control:"Ручное управление",price:"от 42 000 ₽",
+    lead:"Вместительный шкаф на полный проём. Коляска, велосипеды и крупный инвентарь помещаются свободно.",
+    img:"assets/shkaf-parking.jpg",
+    specs:[["Размер (Ш×В)","1200 × 1800 мм"],["Глубина","500 мм"],["Профиль","Алюминий 77 мм"],["Управление","Ручное"],["Полки","3 шт."],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-1520":{title:"Ролетный шкаф ПШ-1520",control:"Ручное управление",price:"от 52 000 ₽",
+    lead:"Большой шкаф на широкое место. Всё хозяйство семьи — от шин до лыж — в одном закрытом пространстве.",
+    img:"assets/shkaf-parking.jpg",
+    specs:[["Размер (Ш×В)","1500 × 2000 мм"],["Глубина","550 мм"],["Профиль","Алюминий 77 мм"],["Управление","Ручное"],["Полки","3 шт."],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-1518А":{title:"Ролетный шкаф ПШ-1518А",control:"Автоматическое (Somfy)",price:"от 58 000 ₽",
+    lead:"Шкаф с автоматической ролетой. Открывается с пульта — удобно, когда руки заняты сумками или колёсами.",
+    img:"assets/shkaf-otkryt.jpg",
+    specs:[["Размер (Ш×В)","1500 × 1800 мм"],["Глубина","550 мм"],["Профиль","Алюминий 77 мм"],["Управление","Автоматическое (Somfy)"],["Полки","3 шт."],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-2018А":{title:"Ролетный шкаф ПШ-2018А",control:"Автоматическое (Somfy)",price:"от 68 000 ₽",
+    lead:"Просторный шкаф под автоматической ролетой. Вмещает 4 колеса в сборе, велосипеды, коляску и сезонные вещи — всё под замком на вашем машиноместе.",
+    img:"assets/shkaf-otkryt.jpg",
+    specs:[["Размер (Ш×В)","2000 × 1800 мм"],["Глубина","600 мм"],["Профиль","Алюминий 77 мм"],["Управление","Автоматическое (Somfy)"],["Полки","4 шт., регулируемые"],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-2520А":{title:"Ролетный шкаф ПШ-2520А",control:"Автоматическое (Somfy)",price:"от 74 000 ₽",
+    lead:"Максимальный размер с автоматикой. Целый гараж на парковке: хватит на два велосипеда, шины и крупный инвентарь.",
+    img:"assets/shkaf-parking.jpg",
+    specs:[["Размер (Ш×В)","2500 × 2000 мм"],["Глубина","650 мм"],["Профиль","Алюминий 77 мм"],["Управление","Автоматическое (Somfy)"],["Полки","4 шт., регулируемые"],["Цвет","Серый / белый (RAL)"]]},
+  "ПШ-3020А":{title:"Ролетный шкаф ПШ-3020А",control:"Автоматическое (Somfy)",price:"от 82 000 ₽",
+    lead:"Самый вместительный шкаф линейки. Под потолок паркинга, с автоматикой и максимумом полок под любое хранение.",
+    img:"assets/shkaf-parking.jpg",
+    specs:[["Размер (Ш×В)","3000 × 2000 мм"],["Глубина","700 мм"],["Профиль","Алюминий 77 мм"],["Управление","Автоматическое (Somfy)"],["Полки","5 шт., регулируемые"],["Цвет","Серый / белый (RAL)"]]},
+  "СТ-60":{title:"Металлический стеллаж СТ-60",control:"Стеллаж",price:"от 8 500 ₽",
+    lead:"Компактный стеллаж сбоку от машиноместа. Полки под инструмент, коробки и мелкий инвентарь.",
+    img:"assets/stellazh.jpg",
+    specs:[["Размер (Ш×Г×В)","600×300×2000 мм"],["Полки","5 шт. (регулир.)"],["Нагрузка","100 кг/полка"],["Покрытие","Цинк / порошок"],["Сборка","Без сварки"],["Цвет","Серый"]]},
+  "СТ-90":{title:"Металлический стеллаж СТ-90",control:"Стеллаж",price:"от 11 000 ₽",
+    lead:"Стеллаж среднего размера. Надёжно держит шины, ящики с инструментом и хозяйственные мелочи.",
+    img:"assets/stellazh.jpg",
+    specs:[["Размер (Ш×Г×В)","900×400×2000 мм"],["Полки","5 шт. (регулир.)"],["Нагрузка","120 кг/полка"],["Покрытие","Цинк / порошок"],["Сборка","Без сварки"],["Цвет","Серый"]]},
+  "СТ-120":{title:"Металлический стеллаж СТ-120",control:"Стеллаж",price:"от 14 500 ₽",
+    lead:"Широкий грузовой стеллаж. Для тех, кому нужно много полок и большая нагрузка на каждую.",
+    img:"assets/stellazh.jpg",
+    specs:[["Размер (Ш×Г×В)","1200×500×2200 мм"],["Полки","6 шт. (регулир.)"],["Нагрузка","150 кг/полка"],["Покрытие","Цинк / порошок"],["Сборка","Без сварки"],["Цвет","Серый"]]}
+};
+
+(function(){
+  const params = new URLSearchParams(location.search);
+  const key = params.get('m');
+  const m = MODELS[key] || MODELS["ПШ-2018А"];
+
+  document.title = m.title + " — ПАРКШКАФ";
+  const set = (sel, val) => { const el=document.querySelector(sel); if(el) el.textContent=val; };
+  set('[data-title]', m.title);
+  set('[data-bc]', m.title.replace('Ролетный шкаф ','').replace('Металлический стеллаж ',''));
+  set('[data-lead]', m.lead);
+  set('[data-price]', m.price);
+  set('[data-control]', m.control);
+
+  const specs = document.querySelector('[data-specs]');
+  if (specs) {
+    specs.innerHTML = m.specs.map(([k,v]) =>
+      `<div class="flex justify-between py-2"><span class="text-[#5b6470]">${k}</span><span class="font-semibold">${v}</span></div>`
+    ).join('');
+  }
+
+  // главное фото = фото модели; миниатюра помечается активной
+  const mainImg = document.getElementById('main-img');
+  if (mainImg) mainImg.src = m.img;
+
+  // префилл поля модели в форме
+  const mf = document.querySelector('[data-model-field]');
+  if (mf) mf.value = m.title;
+
+  // галерея: переключение по миниатюрам
+  document.querySelectorAll('#thumbs .thumb').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('#thumbs .thumb').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      if (mainImg) mainImg.src = t.dataset.src;
+    });
+  });
+})();
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>
