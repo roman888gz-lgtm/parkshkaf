@@ -24,6 +24,29 @@ collections:
       - { label: "Обложка", name: "image", widget: "image", required: false }
       - { label: "Текст статьи", name: "body", widget: "markdown" }
 
+
+  - name: "catalog"
+    label: "Каталог шкафов"
+    files:
+      - name: "models"
+        label: "Модели шкафов"
+        file: "_data/catalog.json"
+        fields:
+          - label: "Модели"
+            name: "models"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}}"
+            fields:
+              - { label: "Название", name: "name", widget: "string" }
+              - { label: "Ширина, мм", name: "width", widget: "string" }
+              - { label: "Высота, мм", name: "height", widget: "string" }
+              - { label: "Глубина, мм", name: "depth", widget: "string" }
+              - { label: "Управление", name: "control", widget: "select", options: ["Ручное", "Автоматическое"], default: "Ручное" }
+              - { label: "Полок, шт", name: "shelves", widget: "string" }
+              - { label: "Цена", name: "price", widget: "string" }
+              - { label: "Фото", name: "photo", widget: "image", required: false }
+              - { label: "Бейдж", name: "badge", widget: "string", required: false }
+
   - name: "settings"
     label: "Настройки сайта"
     files:

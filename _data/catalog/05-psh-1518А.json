@@ -1,0 +1,12 @@
+{
+  "order": 5,
+  "name": "ПШ-1518А",
+  "width": "1500",
+  "height": "1800",
+  "depth": "550",
+  "control": "Автоматическое",
+  "shelves": "3",
+  "price": "от 58 000 ₽",
+  "photo": "/assets/shkaf-otkryt.jpg",
+  "badge": "Авто"
+}

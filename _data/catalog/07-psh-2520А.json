@@ -1,0 +1,12 @@
+{
+  "order": 7,
+  "name": "ПШ-2520А",
+  "width": "2500",
+  "height": "2000",
+  "depth": "650",
+  "control": "Автоматическое",
+  "shelves": "4",
+  "price": "от 74 000 ₽",
+  "photo": "/assets/shkaf-parking.jpg",
+  "badge": "Авто"
+}

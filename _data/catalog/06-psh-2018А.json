@@ -1,0 +1,12 @@
+{
+  "order": 6,
+  "name": "ПШ-2018А",
+  "width": "2000",
+  "height": "1800",
+  "depth": "600",
+  "control": "Автоматическое",
+  "shelves": "4",
+  "price": "от 68 000 ₽",
+  "photo": "/assets/shkaf-otkryt.jpg",
+  "badge": "Популярный"
+}

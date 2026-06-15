@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="stagger-parent grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div id="catalog-grid" class="stagger-parent grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="stagger-child card cursor-pointer">
         <a href="product.html?m=ПШ-0812" class="card-img block h-44"><img src="assets/shkaf-zakryt.jpg" alt="Ролетный шкаф ПШ-0812" loading="lazy"/></a>
         <div class="p-4">
@@ -448,6 +448,35 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var grid=document.getElementById("catalog-grid");
+  if(!grid) return;
+  fetch("_data/catalog.json").then(function(r){return r.json();}).then(function(data){
+    var models=(data&&data.models)||[];
+    if(!models.length) return;
+    grid.innerHTML = models.map(function(m){
+      var ctrl = m.control==="Автоматическое" ? "Авто" : "Ручн.";
+      var badge = m.badge ? '<div class="absolute top-3 left-3"><span class="badge">'+m.badge+'</span></div>' : '';
+      var photo = m.photo || "assets/shkaf-zakryt.jpg";
+      var link = "product.html?m="+encodeURIComponent(m.name);
+      return '<div class="stagger-child card cursor-pointer">'
+        + '<div class="relative"><a href="'+link+'" class="card-img block h-44"><img src="'+photo+'" alt="Ролетный шкаф '+m.name+'" loading="lazy"/></a>'+badge+'</div>'
+        + '<div class="p-4">'
+        + '<div class="flex items-center justify-between mb-2"><h3 class="text-[#1a1f29] font-semibold text-sm">'+m.name+'</h3>'
+        + '<span class="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">'+ctrl+'</span></div>'
+        + '<div class="text-[#5b6470] text-xs divide-y divide-gray-100 mb-3">'
+        + '<div class="flex justify-between py-1"><span>Ш × В</span><span class="text-[#1a1f29] font-medium">'+m.width+' × '+m.height+' мм</span></div>'
+        + '<div class="flex justify-between py-1"><span>Глубина</span><span class="text-[#1a1f29] font-medium">'+m.depth+' мм</span></div>'
+        + '<div class="flex justify-between py-1"><span>Управление</span><span class="text-[#1a1f29] font-medium">'+m.control+'</span></div>'
+        + '<div class="flex justify-between py-1"><span>Полки</span><span class="text-[#1a1f29] font-medium">'+m.shelves+' шт.</span></div></div>'
+        + '<div class="flex items-center justify-between pt-1"><span class="text-[#1B3A5B] font-bold">'+m.price+'</span>'
+        + '<a href="'+link+'" class="text-xs px-2.5 py-1 border border-[#1B3A5B] text-[#1B3A5B] hover:bg-[#1B3A5B] hover:text-white rounded transition-colors cursor-pointer">Подробнее</a></div>'
+        + '</div></div>';
+    }).join("");
+  }).catch(function(){});
+})();
+</script>
 <script src="main.js"></script>
 </body>
 </html>

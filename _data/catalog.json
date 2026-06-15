@@ -1,0 +1,92 @@
+{
+  "models": [
+    {
+      "name": "ПШ-0812",
+      "width": "800",
+      "height": "1200",
+      "depth": "400",
+      "control": "Ручное",
+      "shelves": "1",
+      "price": "от 27 000 ₽",
+      "photo": "assets/shkaf-zakryt.jpg",
+      "badge": ""
+    },
+    {
+      "name": "ПШ-1015",
+      "width": "1000",
+      "height": "1500",
+      "depth": "450",
+      "control": "Ручное",
+      "shelves": "2",
+      "price": "от 34 500 ₽",
+      "photo": "assets/shkaf-zakryt.jpg",
+      "badge": ""
+    },
+    {
+      "name": "ПШ-1218",
+      "width": "1200",
+      "height": "1800",
+      "depth": "500",
+      "control": "Ручное",
+      "shelves": "3",
+      "price": "от 42 000 ₽",
+      "photo": "assets/shkaf-parking.jpg",
+      "badge": ""
+    },
+    {
+      "name": "ПШ-1520",
+      "width": "1500",
+      "height": "2000",
+      "depth": "550",
+      "control": "Ручное",
+      "shelves": "3",
+      "price": "от 52 000 ₽",
+      "photo": "assets/shkaf-parking.jpg",
+      "badge": ""
+    },
+    {
+      "name": "ПШ-1518А",
+      "width": "1500",
+      "height": "1800",
+      "depth": "550",
+      "control": "Автоматическое",
+      "shelves": "3",
+      "price": "от 58 000 ₽",
+      "photo": "assets/shkaf-otkryt.jpg",
+      "badge": "Авто"
+    },
+    {
+      "name": "ПШ-2018А",
+      "width": "2000",
+      "height": "1800",
+      "depth": "600",
+      "control": "Автоматическое",
+      "shelves": "4",
+      "price": "от 68 000 ₽",
+      "photo": "assets/shkaf-otkryt.jpg",
+      "badge": "Популярный"
+    },
+    {
+      "name": "ПШ-2520А",
+      "width": "2500",
+      "height": "2000",
+      "depth": "650",
+      "control": "Автоматическое",
+      "shelves": "4",
+      "price": "от 74 000 ₽",
+      "photo": "assets/shkaf-parking.jpg",
+      "badge": "Авто"
+    },
+    {
+      "name": "ПШ-3020А",
+      "width": "3000",
+      "height": "2000",
+      "depth": "700",
+      "control": "Автоматическое",
+      "shelves": "5",
+      "price": "от 82 000 ₽",
+      "photo": "assets/shkaf-parking.jpg",
+      "badge": "Авто"
+    }
+  ]
+}

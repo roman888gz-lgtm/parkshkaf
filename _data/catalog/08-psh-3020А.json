@@ -1,0 +1,12 @@
+{
+  "order": 8,
+  "name": "ПШ-3020А",
+  "width": "3000",
+  "height": "2000",
+  "depth": "700",
+  "control": "Автоматическое",
+  "shelves": "5",
+  "price": "от 82 000 ₽",
+  "photo": "/assets/shkaf-parking.jpg",
+  "badge": "Авто"
+}
