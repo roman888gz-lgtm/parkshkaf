@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: ru
+
+collections:
+  - name: "articles"
+    label: "Статьи (блог)"
+    label_singular: "Статья"
+    folder: "articles"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    summary: "{{title}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Краткое описание", name: "description", widget: "text", required: false }
+      - { label: "Обложка", name: "image", widget: "image", required: false }
+      - { label: "Текст статьи", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Настройки сайта"
+    files:
+      - name: "contacts"
+        label: "Контакты"
+        file: "_data/contacts.json"
+        fields:
+          - { label: "Телефон", name: "phone", widget: "string" }
+          - { label: "Телефон (для ссылки tel:)", name: "phone_link", widget: "string", hint: "Только цифры с +, напр. +79991234567" }
+          - { label: "Telegram (ссылка)", name: "telegram", widget: "string", required: false }
+          - { label: "WhatsApp (ссылка)", name: "whatsapp", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Город / регион", name: "city", widget: "string", required: false }
+          - { label: "График работы", name: "hours", widget: "string", required: false }
