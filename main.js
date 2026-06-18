@@ -73,6 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('form[data-form]').forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault();
+      const consent = form.querySelector('[data-consent]');
+      if (consent && !consent.checked) {
+        consent.focus();
+        const row = consent.closest('.consent-row');
+        if (row) { row.style.outline = '1px solid #FF6A1A'; row.style.borderRadius = '6px'; }
+        return;
+      }
       const success = form.querySelector('[data-success]');
       const btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.textContent = 'Отправка...'; }
@@ -83,6 +90,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 600);
     });
   });
+
+  /* Cookie consent banner */
+  (function cookieBanner(){
+    var KEY = 'parkshkaf_cookie_consent';
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === 'accepted' || saved === 'declined') return;
+    var bn = document.createElement('div');
+    bn.id = 'cookie-banner';
+    bn.innerHTML =
+      '<div class="cb-inner">' +
+        '<p>Мы используем файлы cookie для корректной работы сайта. Подробнее — в ' +
+        '<a href="cookie.html" target="_blank">Политике cookie</a> и ' +
+        '<a href="privacy.html" target="_blank">Политике обработки ПДн</a>. ' +
+        'Вы можете принять или отклонить необязательные cookie.</p>' +
+        '<div class="cb-actions">' +
+          '<button type="button" class="cb-decline" data-cb="declined">Отклонить</button>' +
+          '<button type="button" class="cb-accept" data-cb="accepted">Принять</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(bn);
+    bn.querySelectorAll('[data-cb]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        try { localStorage.setItem(KEY, btn.getAttribute('data-cb')); } catch (e) {}
+        bn.classList.add('hidden');
+      });
+    });
+  })();
 
   /* Motion scroll animations */
   if (typeof Motion === 'undefined') {
